@@ -18,7 +18,13 @@ def rsi_dataframe(stock=stock):
     ti = TechIndicators(key='api_key', output_format='pandas')
     data_ti, meta_data_ti = ti.get_rsi(symbol=stock.upper(), interval='1min', time_period=period, series_type='close')
 
-    df = data_ts
+    df = data_ts[0],[period]
+
+    #df.index = pd.index(map(lambda x: str(x)[:-3], df.index))
+
+    #df2 = data_ti
+
+    #total_df = pd.concat([df,df2],axis=1,sort=True)
 
     return print(df)
 
