@@ -16,8 +16,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-def hello():
-    return "Hello World"
+@app.route("get_data")
+def get_data():
+    data = mongo.db.data.find()
+    return render_template("data.html", data=data)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -2,7 +2,6 @@ import pandas as pd
 from key import api_key
 import matplotlib.pyplot as plt
 from alpha_vantage.timeseries import TimeSeries
-from arctic import Arctic
 
 stock = input("What Stock Do You want?:")
 
