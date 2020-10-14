@@ -4,8 +4,8 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-if os.path.exists("env.py"):
-    import env
+if os.path.exists("env2.py"):
+    import env2
 
 app = Flask(__name__)
 
@@ -16,10 +16,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("get_data")
-def get_data():
-    data = mongo.db.data.find()
-    return render_template("data.html", data=data)
+@app.route("/get_tasks")
+def get_tasks():
+    tasks = mongo.db.tasks.find()
+    return render_template("data.html", tasks=tasks)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
