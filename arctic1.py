@@ -15,11 +15,11 @@ store.initialize_library('Trading-data-set')
 # Access the library
 library = store['Trading-data-set']
 
-key = 'api_key'
-ts = TimeSeries(key, output_format='pandas')
+api_key = 'api_key'
+ts = TimeSeries(api_key, output_format='pandas')
 
 fb_data, meta_data = ts.get_daily(symbol="FB", outputsize="full")
-meta_data_fb = {'source' : "Alpha Vantage"}
+meta_data_fb = {'source': "Alpha Vantage"}
 
 # Store the data in the library
 library.write('Facebook', fb_data, metadata=meta_data_fb)
