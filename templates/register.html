@@ -13,6 +13,7 @@
         type="text/css" />
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/assets.css') }}">
         <title>Register Page</title>
     </head>
 <body>
@@ -63,12 +64,28 @@
             </ul>
     </nav>
 
-    {% block content %}
+        <section>
+        <!----------Flash messages displayed-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flashes">
+                        <h4>{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        </section>
+
+        <main class="container">
+            {% block content %}
+            {% endblock %}
+        </main>
 
 <div class="card">
   <h5 class="card-header">Login/Register</h5>
   <div class="card-body col-md-6 col-md-auto">
-        <form method="POST" action="{{ url_for('register') }}">
+        <form action="{{ url_for('register') }}" method="POST" >
         <!--------------------Username-->
             <div class="form-group">
                 <label for="username">Username</label>
@@ -87,8 +104,6 @@
     </form>
   </div>
 </div>
-
-    {% endblock %}
 
     </body>
 </html>
