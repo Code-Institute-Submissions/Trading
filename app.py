@@ -16,12 +16,21 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+#loads data page
+@app.route("/base")
+def base():
+    tasks = mongo.db.tasks.find()
+    return render_template("data.html", tasks=tasks)
+
+
+#pulls data from mongo db
 @app.route("/")
 @app.route("/get_tasks")
 def get_tasks():
     tasks = mongo.db.tasks.find()
     return render_template("data.html", tasks=tasks)
 
+#registers user
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -43,6 +52,7 @@ def register():
         #put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -59,7 +69,10 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 #invalid password match
                 flash("Incorrect Username and/or Password")
@@ -69,9 +82,15 @@ def login():
             #username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
-            
+
     return render_template("login.html")
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # grab the session user's username from the db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
 
 
 if __name__ == "__main__":
