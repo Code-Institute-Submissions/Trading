@@ -17,6 +17,7 @@
 	<link
 		href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 		rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 	<title>Profile</title>
 </head>
@@ -60,25 +61,20 @@
 	<section>
 		<!----------Flash messages displayed-->
 		{% with messages = get_flashed_messages() %}
-		{% if messages %}
-		{% for message in messages %}
-		<div class="flashes">
-			<h4>{{ message }}</h4>
-		</div>
-		{% endfor %}
-		{% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flashes">
+                        <h4>{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
 		{% endwith %}
 	</section>
 
-	<main class="container">
-		{% block content %}
-		{% endblock %}
-	</main>
-
     <div class="row">
-        <div class="col s12 m8 offset-m2">
-	        <div class="card">
-                <h3 class="center-align">
+        <div class="col card">
+	        <div class="d-flex justify-content-center">
+                <h3>
                 {{ username }}'s Profile
                 </h3>
             </div>
@@ -87,5 +83,7 @@
 
 
 </body>
+
+<script src="static/js/script.js"></script>
 
 </html>
