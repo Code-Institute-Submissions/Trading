@@ -2,9 +2,95 @@
 {% block content %}
 
     {% for task in tasks %}
-        {{ task.category_name }}<br>
-        {{ task.price_data }}<br>
-        {{ task.ticker_name }}<br>
+        {{ task.ticker }}
+        {{ task.date }}
+        {{ task.open }}
+        {{ task.high }}
+        {{ task.low }}
+        {{ task.close }}
+        {{ task.volume }}
+    {% endfor %}
+
+    {% for task in tasks %}
+    <div class="d-flex justify-content-center">
+        <div class="col-xl-3 col-md-6 mb-4 card-column">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">
+                    <h3>{{ task.ticker }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="col-xl-3 col-md-6 mb-4 card-column">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="text-xs d-flex justify-content-center font-weight-bold text-primary mb-1">Date:</div>
+                <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">{{ task.date }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="card-group">
+        <div class="col-xl-3 col-md-6 mb-4 card-column">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs d-flex justify-content-center font-weight-bold text-primary text-uppercase mb-1">Open:</div>
+                      <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">{{ task.open }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs d-flex justify-content-center font-weight-bold text-primary text-uppercase mb-1">High:</div>
+                      <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">{{ task.high }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs d-flex justify-content-center font-weight-bold text-primary text-uppercase mb-1">Low:</div>
+                      <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">{{ task.low }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs d-flex justify-content-center font-weight-bold text-primary text-uppercase mb-1">Close:</div>
+                      <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">{{ task.close }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4 mx-auto">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs d-flex justify-content-center font-weight-bold text-primary text-uppercase mb-1">Volume:</div>
+                      <div class="h5 mb-0 d-flex justify-content-center font-weight-bold text-gray-800">{{ task.volume }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
     {% endfor %}
 
 {% endblock %}

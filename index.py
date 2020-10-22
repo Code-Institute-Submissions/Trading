@@ -23,9 +23,9 @@ print("")
 
 def rsi_dataframe(stock=stock):
     api_key = 'api_key'
-    period = 60
     ts = TimeSeries(key=api_key, output_format='json')
-    data_ts = ts.get_daily(stock.upper(), outputsize='compact')
+    data_ts = ts.get_weekly(stock.upper())
+
     #print(f"DATA_TS: {data_ts}")
     #print(f"DATA: {type(data_ts[0])}")
     print(f"Date: {data_ts[1]['3. Last Refreshed']}")

@@ -27,7 +27,7 @@ def base():
 @app.route("/")
 @app.route("/get_tasks")
 def get_tasks():
-    tasks = mongo.db.tasks.find()
+    tasks = list(mongo.db.ohlc.find())
     return render_template("data.html", tasks=tasks)
 
 #registers user
