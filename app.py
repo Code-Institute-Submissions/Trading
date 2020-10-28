@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from index import rsi_dataframe as rsi
 if os.path.exists("env2.py"):
     import env2
 
@@ -102,6 +103,13 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/stock", methods=["GET", "POST"])
+def stock():
+    stock = request.form['stockName']
+    stock = rsi(stock)
+    return render_template("base.html", stock=stock)
 
 
 if __name__ == "__main__":
