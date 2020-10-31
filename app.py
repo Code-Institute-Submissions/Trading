@@ -17,6 +17,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+@app.route("/")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
 #loads data page
 @app.route("/base")
 def base():
@@ -25,7 +30,6 @@ def base():
 
 
 #pulls data from mongo db
-@app.route("/")
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.ohlc.find())
@@ -100,9 +104,8 @@ def profile(username):
 @app.route("/logout")
 def logout():
     #remove user from session cookies
-    flash("You have been logged out")
     session.pop("user")
-    return redirect(url_for("login"))
+    return redirect(url_for("index"))
 
 
 @app.route("/stock", methods=["GET", "POST"])
