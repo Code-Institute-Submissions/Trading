@@ -108,11 +108,11 @@ def logout():
     return redirect(url_for("index"))
 
 
-@app.route("/stock", methods=["GET", "POST"])
+@app.route("/stock", methods=["GET"])
 def stock():
-    stock = request.form['stockName']
-    stock = rsi(stock)
-    return render_template("base.html", stock=stock)
+    stock_ticker = request.args['stockName']
+    stock_data = rsi(stock_ticker)
+    return render_template("data.html", stock_data=stock_data)
 
 
 if __name__ == "__main__":
