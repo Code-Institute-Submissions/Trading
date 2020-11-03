@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from key import api_key
+# from key import api_key
 from flask_pymongo import PyMongo
 from alpha_vantage.timeseries import TimeSeries
 if os.path.exists("env2.py"):
