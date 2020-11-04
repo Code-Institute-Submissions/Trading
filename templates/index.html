@@ -15,8 +15,16 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/new-age.min.css') }}">
-  <!-- Plugin CSS -->
+
+  <!------------------------------------------------------------------e-mail js function-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.js"></script>
+            <script type="text/javascript">
+                (function() {
+                    emailjs.init("user_iezLnx0DcuKeB2NUx8BAK");
+                })();
+        </script>
 
   <!-- Custom styles for this template -->
     
@@ -183,7 +191,40 @@
     </div>
   </section>
 
+  <!----------------------------------------------------------------------------------------Subscribe-->
+
+
+    <button class="open-button" onclick="openForm()">Hi There! Click Me!</button>
+	<div class="form-popup" id="myForm">
+		<form class="form-container">
+			<h1>Thanks for Visiting</h1>
+
+			<label><b>Please Subscribe to the Newsletter at the bottom of the page!</b></label>
+			<p> Lots of Great Content!</p>
+
+			<label><b>Data-Planner</b></label>
+			<p>Always on Time and correct</p>
+
+			<button type="btn" class="btn cancel" onclick="closeForm();return false">Close</button>
+		</form>
+	</div>
+
   <footer>
+
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="center-form">
+                    <form onsubmit="return sendMail(this);">
+                        <label for="email" class="sr-only">E-Mail</label>
+                        <input type="text" name="email" class="form-control" id="emailaddress" placeholder="E-Mail" required>
+                        <button type="submit" class="btn btn-primary mb-2">Subscribe!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
       <p>&copy; Data Trader 2020. All Rights Reserved.</p>
       <ul class="list-inline">
@@ -200,14 +241,17 @@
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ url_for('static', filename = 'jquery/jquery.min.js') }}"></script>
-
   <!-- Plugin JavaScript -->
   <script src="{{ url_for('static', filename = 'jquery-easing/jquery-easing.min.js') }}"></script>
 
   <!-- Custom scripts for this template -->
   <script src="{{ url_for('static', filename = 'js/new-age.min.js') }}"></script>
+
+<!-----------Script for email.js-->
+  <script src="{{ url_for('static', filename = 'js/sendEmail.js') }}"></script>
+
+<!----------contact button page bottom-->
+  <script src="{{ url_for('static', filename = 'js/contact.js') }}"></script>
 
 </body>
 </html>

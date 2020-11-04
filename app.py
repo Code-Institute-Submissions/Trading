@@ -9,6 +9,7 @@ from index import rsi_dataframe as rsi
 if os.path.exists("env2.py"):
     import env2
 
+
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
