@@ -48,42 +48,45 @@ and directed to the home page.
 
 ## Users
 
-The website has a target audience of 18-70 year olds. The users will ideally sign up for the service and provide
-emails for newsletters which in turn can generate revenue.
+The website has a target audience of 18-70 year olds. Users must sign up to the service using the register function.
+The user also has the option to subscribe to the website newsletter at the bottom of the home page.
 
 
 ## Strategy
 
-The strategy for the website would be to target venues and bands to promote the site and gain traction through presence at shows and keeping 
-up to date information on upcoming shows and previously held shows. Bootstrap has been utilised in the design of the website for the navigation 
-and comments and footer.
+The strategy for the website is users will ideally sign up for the service and provide
+emails for newsletters which in turn can generate revenue.
 
 
 ## Scope
 
-The Scope of the website is to provide up to date relevant information to users on upcoming shows and reviews on past shows. The website also 
-provides links to Ticketmaster purchase and up to date event listing using Ticketmaster API and Google maps API.
+The Scope of the website is to provide up to date relevant information to users on stocks of their choosing.
 
 
 ## Structure
 
 ---Home---
 
-The home page provides users with the initial landing page and is designed to be content heavy. The page provides visual content via the 
-carousel and also an over view of upcoming events and locations of the upcoming featured events via the ‘Upcoming Events’ section of the 
-page while also utilising the Google maps API below the ‘Upcoming Events’ section. The Subscribe function also provides ease of keeping 
-up to date and can also provide a list of registered users for analytical purposes.
+The home page is designed to be intuitive and provide bright vibrant colours to users to create a new and exciting
+feeling about the service. The home page is created using a bootstrap theme and customised to purpose. I have
+included a macbook and surface picture. I have also amended the content to reflect the service provided. I have then
+placed a custom javascript button which shows a gif of a computer searching the net which is hilarious. I have also
+included a search box and subscribe button located at the bottom of the page. This is linked to email js and 
+provides return an email to the suscribed user. Footer of the page provides content based around copyright.
 
----Social---
+---Login---
 
-The Social page provides the user with up to date information on events and people reaction to the shows and how they have interacted with 
-the website. This feature encourages growth and increases interactivity with the website.
+The login page allows a user to login to the service once registered. The login function has been created using 
+Flask and Werkzeug encryption which is linked to mongodb for storing the user variables.
 
----Events---
+---Register---
 
-The events section of the website provides users with the most up to date information via the Ticketmaster API. This function will allow 
-users to browse the catalogue of upcoming events alphabetically and based on the information provided can then take advantage of the 
-Ticketmaster widget on the home page to book the show mitigating any data protection or card services fees.
+The Register function allows users to register for the service if they have not already. This function also
+utilises Flask & Werkzeug. The register function has some user authentication built in. Users must have a
+username longer than 5 characters and a password that is also greater than 5 characters. The email must use
+alpha numerical and also allows symbols. The users variables are stored within mongodb and called upon login.
+
+--Data
 
 
 ## Skeleton
