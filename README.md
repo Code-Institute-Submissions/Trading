@@ -174,29 +174,23 @@ User feedback was positive for the purposes of UX.
 
 ## Testing
 
-Testing was completed as the site was developed, I took the approach of start with the easy aspects and develop around these. 
-This allowed me to develop the core functionality of the site and test this rigorously as the site developed across mobile, 
-tablet, desktop, larger screens and multiple browsers Windows IE, Mozilla Firefox, Google Chrome, Opera.
-Testing began with responsiveness around the navigation bar which performed as expected across all pages. I attempted to 
-include a search function using PHP script within the navigation bar however this was decided against due to the complexity 
-of the code and the requirement to ensure all relevant functionality was in place to ensure necessary submission grade was 
-achieved. This feature was returned to in later versions using a separate approach. 
-The carousel feature was then tested to ensure responsive across mobile, tablet, desktop and larger screens and the above-mentioned 
-browsers. This performed as expected and remained responsive throughout site development. 
-The Featured artists section was then tested which required some amendments to the code as I had initially intended on including two 
-artists initially however decided to include three for increased content. The feature performed well upon updated container div.
-The Map feature is a feature that is only available on desktop view and not a feature that is provided on mobile view. The functionality 
-is now available on smaller screens and causes user inoperability die to the scale.
-The Ticketmaster API Widget performs over all tested screen sizes and browsers and provides a good user experience due to its size and 
-carousel of events.
-Subscribe function required some fixes as the site progressed. Initially the subscribe function was floating left I then had to amend the 
-display CSS to centre the content. The Mail.js API service is fully functional and users receiving a customised welcome mail upon entering 
-their email address on site.
-Footer remained responsive across all screen sizes and browsers.
-The ‘What are you Sayin’ section of Social page utilises bootstrap for the functionality and has remained functional across all screens sizes 
-and browsers tested.The events page Ticketmaster API required and initial learning curve however upon researching the implementation it was a correctly developed 
-within the website. This API has remained responsive over all screen sizes and browsers tested.
+I have multiple iteration of the original styling for the website. I then chose to use two seperate bootstrap templates
+for the final product. The home page uses a landing page taken from bootstrap while the core functioning pages use a
+seperate template. This has allowed for a unique design that has been styled to purpose. The orignal base.html has a number
+of cards which I removed as they did not serve a purpose and created clutter in the UI. My login function had difficulty with
+the user authentication however upon review the pattern aspect of the input was amended to ensure proper functionality.
 
+The index.py code went through a number of iterations also as this was the greatest challenge of the entire project.
+Originally I was pulling the data in a pandas format however this was changed to allow easier manipulation of data to 
+.json format. The rsi_dataframe function was also amended on a number of occasions as originally the function would originally
+show within the terminal window. This required further research as the requirement was that the function be uses within the
+front end UI.
+
+The date of the rsi_dataframe was also troublesome and required a fix - ohlc_date. This allowed for the data to be rendered
+in the required format.
+
+Storing the data in the mongodb was a challenge as this the data was provided with 2 tuples [0],[1]. The [0] was the meta data
+and the [1] was the price related data.
 ## HTML/CSS-Validator
 
 - HTML
