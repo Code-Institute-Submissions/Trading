@@ -72,7 +72,8 @@ feeling about the service. The home page is created using a bootstrap theme and 
 included a macbook and surface picture. I have also amended the content to reflect the service provided. I have then
 placed a custom javascript button which shows a gif of a computer searching the net which is hilarious. I have also
 included a search box and subscribe button located at the bottom of the page. This is linked to email js and 
-provides return an email to the suscribed user. Footer of the page provides content based around copyright.
+provides return an email to the suscribed user. Footer of the page provides content based around copyright. The home
+page uses a number of static elements. Jquery, css, js, jquery-easing.
 
 ---Login---
 
@@ -86,8 +87,24 @@ utilises Flask & Werkzeug. The register function has some user authentication bu
 username longer than 5 characters and a password that is also greater than 5 characters. The email must use
 alpha numerical and also allows symbols. The users variables are stored within mongodb and called upon login.
 
---Data
+---Data---
 
+The data page is the 'piece de resistance' of the entire project. The layout is minimalist in design with
+the search function as the primary aspect of the page. The search function utilises python programming and
+calls the Alpha Vantage API which is then stored within mongodb. The code is built to recognise when a stock
+has been called previously within the db to reduce API calls. The pythin function calls the API through the 
+page index.py. This is connected to Mongodb through the env2.py.(Initally called env.py however a workaround
+required the creating of env2.py and it remains). The API key is stored in the key.py. Upon pushing to Heroku
+I descovered that the the API key must be stored as a config var as my key.py file has been included within
+my .gitignore. The index.py function rsi_dataframe is imported to the app.py file as rsi. This is then used
+within a Flask function to render this function within my search bow on the base.html page. The python function
+with my index.py file (rsi_dataframe), sends the data to mongodb and from mongodb the information is rendered on
+the data.html page which is then visualixed on the base.html page.
+
+---Profile---
+
+The profile page is built also using a flask function in python and is currenty designed to provide a welcome message
+to the user upon login or registering using jinja templating language.
 
 ## Skeleton
 
@@ -112,24 +129,15 @@ The navigation on mobile and desktop does not alter except for the navigation ba
 
  ## Current-Features
 
-Within my code I have used HTML, CSS, JS, and Bootstrap with the inclusion of several API services. I have also begun to implement a 
-search function using ‘React’ and have also begun to research ‘indexeddb’. I have left my code in comments within the development of 
-my Github submission. I primarily used bootstrap for the development of the layout as this provided a responsive design for mobile, 
-tablet, desktop and larger screens. The primary learning curve revolved around the inclusion of API’s within the site. I have included 
-3 API’s in the development of the site. Google Maps API, Mail.js API, and Ticketmaster API. Google maps API was implemented to show 
-the featured artists event locations as a visual representation on the home page. Mail.js API provides a response welcome e-mail to 
-subscribers of the website and is provided on all three webpages. Ticketmaster API provides a Widget to the home page which re-directs 
-users to the Ticketmaster purchase site, the Ticketmaster API also provides JSON data which is used to provide a listing of events, 
-date location and time on the ‘Events’ section of the website. 
-
+Within my code I have used HTML5, CSS3, JS, Python, Jquery, Jinja, Flask, Mongodb, email js, Heroku and Bootstrap with 
+the inclusion of Alpha Vantgae API services. The current features store users register information and .json data received
+from Alpha Vantage.
 
 ## Further-Development
 
-Further development of the website will allow the site to include a search function using either Fetch or React which can search the 
-Ticketmaster API JSON data and allow users to filter for their desired result. Further development would link the JSON location data 
-to the google Maps API and provide a live location of the event. Connecting the subscribe service to a database to track a listing of 
-all subscribers is a development feature to be included. Within the ‘What are you Sayin’ section by connecting to twitter or other 
-social media platforms API this would allow the site to pull live updates with the use of a hashtag.
+Further development would allow for manipulation of the data received and graphing of the data. This would be in
+place of the static data cards on the base.html page. Other developments would allow for recently searched data 
+by the user within the profile.html page which currently shows a welcome message.
 
 ## User Feedback
 User feedback was positive for the purposes of UX.
