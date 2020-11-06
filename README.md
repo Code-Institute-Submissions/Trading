@@ -4,7 +4,7 @@
 
 Data Trader has been designed to easily visualise recent stock data by taking advantage of the Alpha Vantage
 API. Data Trader takes utilises Alpha Vantages API to pull a user's desired stock and visualise this within
-a users prolfile.
+a users profile.
 
 
 The website development and purpose has been broken down, into the detailed sections below -
@@ -32,19 +32,24 @@ The website development and purpose has been broken down, into the detailed sect
 
   > # UX
 
-The website is created to be responsive to mobile, tablet, desktop and larger screens. The UX is straight forward and is not data heavy. 
-The homepage consists of a carousel of featured events then a brief synopsis of the upcoming events location and band names. Below this 
-google maps API provides the location of the featured upcoming events. Above the footer users can subscribe to the service to receive 
-e-mail notifications of upcoming events. A custom response email has been provided using mail.js API. The 'Social' page has provided users 
-with feedback from previous users and updates from events with a subscribe function provided at the bottom of the page. The events page 
-utilises the Ticketmaster API and provides an up to date listing of events with a subscribe function provided at the bottom of the page. 
-The mobile design provides a collapsed navigation bar.
+The user experience when reaching the site is intended to encourage sign up. Bright colour scheme with content 
+related to the service provided as a user scrolls the page. The addition of a javascript button on the bottom
+right hand of the page with an embedded GIF is a fun way to encourage users to delve deeper into the service.
+Upon signing up and registering for the service using the register page a user is then directed to the dashboard
+page. This is a simple design which included a number of card divs to visualize information. At the top right of
+the page a user is provided with a grop down which can allow the options of profile & logout. Below the the 
+navigation bar then sits 4 card divs with static information. This is purely asthetic. Below the 4 card divs
+lies the card div which holds the primary function of the page. With the search function a user can input
+any relevant stock ticker held with Alpha Vantage. The information is then visualzied below the search function
+allowing a user to see clearly the open,high,low,close,volume of a chosen stock on a particular day. The user can
+then log out upon searching for their perferred stock using the drop down on the top right hand corner of the 
+navigation bar. The user is prompted if they wish to logout, and upon confirming this they are then logged out
+and directed to the home page.
 
 ## Users
 
-The website has a target audience of 18-50 year olds. These users are active within the gig community. Current / upcoming bands are also 
-a target audience as they can be provided with relevant information on their favourite bands. The ‘What are you Sayin’ section on the 
-'Social' page can also provide a social element sot the site and allow users to gain relevant up to date information on shows and performances.
+The website has a target audience of 18-70 year olds. The users will ideally sign up for the service and provide
+emails for newsletters which in turn can generate revenue.
 
 
 ## Strategy
