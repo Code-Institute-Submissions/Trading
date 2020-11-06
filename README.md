@@ -145,10 +145,13 @@ User feedback was positive for the purposes of UX.
 
 ## Technologies-Utilised
 
-- HTML
-- CSS
-- Java script
-- Python
+- HTML5
+- CSS3
+- [Java-script](https://www.javascript.com/)
+- [Python](https://www.python.org/)
+- [JQuery](https://jqueryui.com/)
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+- [Jquery](https://jqueryui.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Mongodb](https://www.mongodb.com/)
 - [Heroku](https://www.heroku.com/)
@@ -159,16 +162,15 @@ User feedback was positive for the purposes of UX.
 - [HTML Validator](https://validator.w3.org/)
 - [CSS Validator](https://validator.w3.org/)
 - [MDN](https://developer.mozilla.org/en-US/)
-
-
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Py-Mongo](https://pypi.org/project/pymongo/)
 - [W3schools](https://www.w3schools.com/)
 - Sam's Teach Yourself - HTML, CSS, Javascript
 
 ## API's
 
 - [Email.JS](https://www.emailjs.com/)
-- [Google-Maps](https://cloud.google.com/maps-platform)
-- [TicketMaster](https://developer.ticketmaster.com/)
+- [Alpha-Vantage](https://www.alphavantage.co/)
 
 ## Testing
 
