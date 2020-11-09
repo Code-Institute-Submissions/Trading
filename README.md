@@ -174,7 +174,7 @@ User feedback was positive for the purposes of UX.
 
 ## Testing
 
-I have multiple iteration of the original styling for the website. I then chose to use two seperate bootstrap templates
+I have multiple iterations of the original styling for the website. I then chose to use two seperate bootstrap templates
 for the final product. The home page uses a landing page taken from bootstrap while the core functioning pages use a
 seperate template. This has allowed for a unique design that has been styled to purpose. The orignal base.html has a number
 of cards which I removed as they did not serve a purpose and created clutter in the UI. My login function had difficulty with
@@ -190,73 +190,75 @@ The date of the rsi_dataframe was also troublesome and required a fix - ohlc_dat
 in the required format.
 
 Storing the data in the mongodb was a challenge as this the data was provided with 2 tuples [0],[1]. The [0] was the meta data
-and the [1] was the price related data.
+and the [1] was the price related data. This can be seen in the rsi_dataframe function within index.py which then returns stock_data.
+
+
 ## HTML/CSS-Validator
 
 - HTML
 
-Shows warning on across all pages related to text/javascript which states is not required however is neccessary for mail.js function
-Errors showing on index.html related to Ticketmaster Widget which are necessary for Widget to function. Specific Error - 'W-type not allowed in div' at this point.
-Warnings relating to comments -- however errors are necessary and do not affect functionality.
-Warnings on event page relating to empty heading, JSON data fills empty heading and warning does not affect function for API.
+HTML Validator shows error relating to Jinja templating language used. This is unavoidable as this is a 
+requirment for the page to run effectively.
 
 - CSS 
 
-No errors or warnings detected in CSS validator.
+Two warnings shown on css validator however they are also required for operation of site. A bracket and a value 
+of text has shown.
 
 ## Deployment
 
 The site was deployed on Github and code is available to view using this site.
-I navigated to my Github account, on the top left of the screen I selected my "Event-Planner" repository, 
+I navigated to my Github account, on the top left of the screen I selected my "Trading" repository, 
 I then deployed through the settings section by scrolling to the 'Github Pages' section roughly 3/4 of the 
-way down the page. Selected my master branch as my source and my page was presented to me as
+way down the page. Selected my master branch as my source and my page was presented to me as.
 
 
-- Event-Planner : (https://karlitoyo.github.io/Event-Planner/)
+- Event-Planner : (https://github.com/Karlitoyo/Trading)
 
 **Cloning**
 
-Can be achieved by selecting the green highlighted button which states - "Clone or Download" via the webpage: (https://github.com/Karlitoyo/Event-Planner) this will 
+Can be achieved by selecting the green highlighted button which states - "Clone or Download" via the webpage: (https://github.com/Karlitoyo/Trading) this will 
 give the option of downloading a .zip file or opening in desktop an option to clone using HTTP is also given for cloning and running project locally through Gitpod. 
 I make use of the git pull function (if required to update the branch) and git clone and then git push to named repository.
 
 **Version-Control**
 
-My versions overall style has remained largely the same throughout the development of the site.
-My initial versions included a search function which would provide a visual search function through the Ticketmaster API’s JSON data. I began 
-by researching PHP script to achieve this goal however time became a constraint and I was then forced to focus on the functionality I could 
-manage before returning to this function. My next attempt at the search function was through ‘indexeddb’ which is an emerging tech utilising 
-the browsers memory to index a database within the browser. This was initially successful as I created a search function and DB within the 
-browser however I was unable to link the API JSON data to the db. My next attempt at the search function was related to ‘React’ and ‘Fetch’. 
-I am currently researching this technology however due to time constraint I have been unsuccessful in implementing this feature in this version. 
-I have included my code for review within app.js + search.js.
+My initial version of the site were mainly a login function and then directed to the profile page upon login. I then
+changed the approach to direct users to the base.html page to allow direct access to the search function of the 
+webpage. I then included the index.html page as the landing page to provide some eactra functionality and 
+information about the site. Many previous versions of the site included differing iterations of the search 
+function and base.html layouts. I then decided on a minimalist approach to this page as the search result 
+provides alot of information which the user can naviagte upon use of the function.
 
 
 > # User-Stories
 
 ## First-User
-First user found this navigation of the site to be fluid and easy to navigate. User commented on responsiveness of website on mobile device and desktop. 
-User could easily navigate the events section and locate an act.
+The first user who navigated the site found the layout of the index.html page enticing and commented on the 
+colous scheme being bright and vibrant. User also found the search function to be very eay to use.
 
 ## Second-User
-Second user found the site to be well developed and found the user comments on the Social page to be a good feature. User commented that map service was a 
-great feature as it would provide the venue’s locational data to foreign holiday makers or users unfamiliar with the local terrain who wish to see a performance. 
+The second user completed register function and found the pop up on landing page to be a good addition. 
+Stated wished for more functionality on profile page of website. This is planned for future iterations.
+
 
 ## Developer comments
-I will continue to develop this site to include a search function as the ‘React’ method to searching JSON data seems to be the complete method however has a large 
-learning curve. I also would like to link the Ticketmaster API JSON data to the Google maps API showing the location of a searched event. Indexeddb is a further 
-technology I am interested to develop.
+I will continue to develop date trader. I took on this project to learn more about have data is manipulated
+by code. I felt that stock data was the most readily available and easiest to work with in a short amount of
+time. Upon starting the project I learnt how to pull data using the API, storing the data in a db, and then 
+visualising the data on my UI.
 
 
 > # Credits
 
-Special thanks must be given to the creators of all the above and below mentioned sources I used to develop 'Event-Panner'.
+Special thanks must be given to the creators of all the above and below mentioned sources I used to develop 'Data-Trader'.
+Thanks to my mentor Sandeep Agarwal, the code institute tutors, in particular Scott as he provided invaluable advise and
+feedback throughout my project.
 
 ## Credits
 
-- Imran Sayed - Codeytek Academy (Youtube content creator channel for the React Search API function being developed)
-- Hussein Nasser - (Youtube content creator channel for the Indexeddb function being developed)
+- Romel Torres - https://github.com/RomelTorres/alpha_vantage
+- Rapid API - https://rapidapi.com/alphavantage/api/alpha-vantage
+- PIP install Python - Youtube creator
 - W3schools
 - MDN
-- https://rapidapi.com/blog/how-to-use-an-api-with-javascript/
-- https://google.github.io/styleguide/jsguide.html
