@@ -112,12 +112,11 @@ Wireframes for the main navigation pages can be found below -
 
  --Wireframes--
  
-- [Home-Page](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Home.png)
-- [Social-Page](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Social.png)
-- [Events-Page](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Events.png)
-- [Home-Page-Mobile](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Events-Planner-Mobile.png)
-- [Social-Page-Mobile](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Mobile-Social.png)
-- [Events-Page-Mobile](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Mobile-Events.png)
+- [Home-Page](https://github.com/Karlitoyo/Trading/blob/master/balsamiq/Home%20Page.png)
+- [Login-Page](https://github.com/Karlitoyo/Trading/blob/master/balsamiq/Login%20Page.png)
+- [Register-Page](https://github.com/Karlitoyo/Trading/blob/master/balsamiq/Register%20Page.png)
+- [Data-Page](https://github.com/Karlitoyo/Trading/blob/master/balsamiq/Data%20Page.png)
+- [Data-Page-Mobile](https://github.com/Karlitoyo/Trading/blob/master/balsamiq/Data%20Page%20Mobile.png)
 
 
 ## Surface
