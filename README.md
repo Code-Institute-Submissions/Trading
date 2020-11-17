@@ -128,9 +128,25 @@ The navigation on mobile and desktop does not alter except for the navigation ba
 
  ## Current-Features
 
-Within my code I have used HTML5, CSS3, JS, Python, Jquery, Jinja, Flask, Mongodb, email js, Heroku and Bootstrap with 
-the inclusion of Alpha Vantgae API services. The current features store users register information and .json data received
-from Alpha Vantage.
+- I have included a home page with a login function and register function. At the bottom of the home page a javascript
+  box with a gif is shown directing users to the bottom of the page where an subscribe feature has been added.
+  Upon providing an email the user subscribes and receives an email using emailjs.
+
+- Upon registering for the platform a user is then directed to the main page which includes card relating to information
+  that is static. A user can then input a relavnt stock into the search function which will provide the requested stock
+  information.
+
+- A user then has the option of visiting their profile page through the navigation bar on the top right of the site. Or
+  logging out.
+
+- Upon visiting their profile page a user is greeted with the relvant greeting for either siging up or logging in.
+
+- Upon a user logging out they are presented with a text box which they must select to confirm they do intent to log out.
+
+- Once a user visits the website upon registering they can enter the site using the login function. Upon login the user
+  is again directed to the main page with search function.
+
+- The data trading golden name on the top right of the login and register page will direct a user to the home page.
 
 ## Further-Development
 
@@ -140,7 +156,6 @@ by the user within the profile.html page which currently shows a welcome message
 
 ## User Feedback
 User feedback was positive for the purposes of UX.
-
 
 ## Technologies-Utilised
 
@@ -191,6 +206,8 @@ in the required format.
 Storing the data in the mongodb was a challenge as this the data was provided with 2 tuples [0],[1]. The [0] was the meta data
 and the [1] was the price related data. This can be seen in the rsi_dataframe function within index.py which then returns stock_data.
 
+I included different features related to the site. I had originally intended for the user to be directed to the 
+profile page of the site and then to visit the main data page. I however changed this in later iterations.
 
 ## HTML/CSS-Validator
 
@@ -211,14 +228,21 @@ I navigated to my Github account, on the top left of the screen I selected my "T
 I then deployed through the settings section by scrolling to the 'Github Pages' section roughly 3/4 of the 
 way down the page. Selected my master branch as my source and my page was presented to me as.
 
+To deploy the site, an individual must make use of Heroku + Mongo Atlas. The env.py file will contain the relevant
+connection variables for use with deployment. The Alpha Vantage API key must be stored within the Heroku config
+variables for successful deployment on Heroku.
 
-- Event-Planner : (https://github.com/Karlitoyo/Trading)
+
+- Data-Planner : (https://github.com/Karlitoyo/Trading)
 
 **Cloning**
 
 Can be achieved by selecting the green highlighted button which states - "Clone or Download" via the webpage: (https://github.com/Karlitoyo/Trading) this will 
 give the option of downloading a .zip file or opening in desktop an option to clone using HTTP is also given for cloning and running project locally through Gitpod. 
 I make use of the git pull function (if required to update the branch) and git clone and then git push to named repository.
+
+For successful cloning a user must ensure the relevant config variables are added to an env.py file and also that
+the Alpha Vantage API key is stored within the Heroku Config variables.
 
 **Version-Control**
 
@@ -233,12 +257,10 @@ provides alot of information which the user can naviagte upon use of the functio
 > # User-Stories
 
 ## First-User
-The first user who navigated the site found the layout of the index.html page enticing and commented on the 
-colous scheme being bright and vibrant. User also found the search function to be very eay to use.
-
-## Second-User
-The second user completed register function and found the pop up on landing page to be a good addition. 
-Stated wished for more functionality on profile page of website. This is planned for future iterations.
+- The first user who navigated the site found the layout of the index.html page enticing and commented on the 
+  colour scheme being bright and vibrant. User also found the search function to be very eay to use.
+- The second user completed register function and found the pop up on landing page to be a good addition. 
+  Stated wished for more functionality on profile page of website. This is planned for future iterations.
 
 
 ## Developer comments
@@ -251,7 +273,7 @@ visualising the data on my UI.
 > # Credits
 
 Special thanks must be given to the creators of all the above and below mentioned sources I used to develop 'Data-Trader'.
-Thanks to my mentor Sandeep Agarwal, the code institute tutors, in particular Scott as he provided invaluable advise and
+Thanks to my mentor Sandeep Aggarwal, the code institute tutors, in particular Scott as he provided invaluable advise and
 feedback throughout my project.
 
 ## Credits

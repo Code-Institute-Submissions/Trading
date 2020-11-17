@@ -24,18 +24,13 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
 
+#pulls data from mongo db
 #loads data page
 @app.route("/base")
 def base():
     tasks = mongo.db.tasks.find()
     return render_template("data.html", tasks=tasks)
 
-
-#pulls data from mongo db
-@app.route("/get_tasks")
-def get_tasks():
-    tasks = list(mongo.db.ohlc.find())
-    return render_template("data.html", tasks=tasks)
 
 #registers user
 @app.route("/register", methods=["GET", "POST"])
@@ -109,7 +104,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("index"))
 
-
+# search function on base.html page to call API function
 @app.route("/stock", methods=["GET"])
 def stock():
     stock_ticker = request.args['stockName']
@@ -120,4 +115,4 @@ def stock():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
