@@ -232,6 +232,10 @@ To deploy the site, an individual must make use of Heroku + Mongo Atlas. The env
 connection variables for use with deployment. The Alpha Vantage API key must be stored within the Heroku config
 variables for successful deployment on Heroku.
 
+To successfully deploy the site a user will need to create their own instance of env2.py and input the relevant 
+mongodb variables such as db name and password, also including the relevant Heroku variables such as IP & PORT.
+The API key is stored on Heroku also and within the env.py file.
+
 
 - Data-Planner : (https://github.com/Karlitoyo/Trading)
 

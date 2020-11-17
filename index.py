@@ -1,6 +1,5 @@
 import os
 from flask import Flask
-# from key import api_key
 from flask_pymongo import PyMongo
 from alpha_vantage.timeseries import TimeSeries
 if os.path.exists("env2.py"):
@@ -23,8 +22,6 @@ print("")
 # This has been imported to app.py as rsi and included in
 # a python flask function /stock
 def rsi_dataframe(stock):
-    api_key = 'api_key'
-    period = 60
 
     stock = stock.upper()
 
