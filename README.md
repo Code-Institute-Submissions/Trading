@@ -228,13 +228,13 @@ I navigated to my Github account, on the top left of the screen I selected my "T
 I then deployed through the settings section by scrolling to the 'Github Pages' section roughly 3/4 of the 
 way down the page. Selected my master branch as my source and my page was presented to me as.
 
-To deploy the site, an individual must make use of Heroku + Mongo Atlas. The env.py file will contain the relevant
+To deploy the site, an individual must make use of Heroku + Mongo Atlas. The env2.py file will contain the relevant
 connection variables for use with deployment. The Alpha Vantage API key must be stored within the Heroku config
 variables for successful deployment on Heroku.
 
 To successfully deploy the site a user will need to create their own instance of env2.py and input the relevant 
 mongodb variables such as db name and password, also including the relevant Heroku variables such as IP & PORT.
-The API key is stored on Heroku also and within the env.py file.
+The API key is stored on Heroku also and within the env2.py file.
 
 
 - Data-Planner : (https://github.com/Karlitoyo/Trading)
@@ -245,7 +245,7 @@ Can be achieved by selecting the green highlighted button which states - "Clone 
 give the option of downloading a .zip file or opening in desktop an option to clone using HTTP is also given for cloning and running project locally through Gitpod. 
 I make use of the git pull function (if required to update the branch) and git clone and then git push to named repository.
 
-For successful cloning a user must ensure the relevant config variables are added to an env.py file and also that
+For successful cloning a user must ensure the relevant config variables are added to an env2.py file and also that
 the Alpha Vantage API key is stored within the Heroku Config variables.
 
 A procfile is also required for running the project on Heroku. This stores all the relevant third party systems linked
