@@ -244,6 +244,9 @@ I make use of the git pull function (if required to update the branch) and git c
 For successful cloning a user must ensure the relevant config variables are added to an env.py file and also that
 the Alpha Vantage API key is stored within the Heroku Config variables.
 
+A procfile is also required for running the project on Heroku. This stores all the relevant third party systems linked
+Werkzeug and pymongo and allows launch on Heroku.
+
 **Version-Control**
 
 My initial version of the site were mainly a login function and then directed to the profile page upon login. I then
