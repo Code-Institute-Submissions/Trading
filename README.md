@@ -209,6 +209,9 @@ and the [1] was the price related data. This can be seen in the rsi_dataframe fu
 I included different features related to the site. I had originally intended for the user to be directed to the 
 profile page of the site and then to visit the main data page. I however changed this in later iterations.
 
+Error shown when search function on base.html was used without any input. Included pattern pattern="^[a-zA-Z0-9]{5,15}$" & required
+to prevent user from receiving error message
+
 ## HTML/CSS-Validator
 
 - HTML
