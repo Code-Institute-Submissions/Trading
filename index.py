@@ -22,6 +22,7 @@ print("")
 # This has been imported to app.py as rsi and included in
 # a python flask function /stock
 def rsi_dataframe(stock):
+    api_key = "api_key"
 
     stock = stock.upper()
 
